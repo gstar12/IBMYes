@@ -20,11 +20,11 @@ jobs:
         chmod -R 777 ./IBM_Cloud_CLI/
     - name: Login IBM Cloud
       env:
-        IBM_ACCOUNT: ${{ secrets.IBM_ACCOUNT1 }}
+        IBM_ACCOUNT: ${{ secrets.F_ACCOUNT }}
         REGION_NUM: ${{ secrets.REGION_NUM1 }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud login <<EOF
-        $IBM_ACCOUNT1
+        $F_ACCOUNT
         $REGION_NUM1
         no
         EOF
